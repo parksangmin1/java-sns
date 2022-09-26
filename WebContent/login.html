@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style type="text/css">
+	.login-warp{
+		position: absolute;
+		width: 400px;
+		height: 300px;
+		left: 300px;
+		top: 100px;
+		background: #C8DAF5;
+	}
+	.title{
+		position: absolute;
+		width: 313px;
+		height: 50px;
+		left: 40px;
+		top: 10px;
+
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 48px;
+		text-align: center;
+	}
+	.id{
+		position: absolute;
+		width: 270px;
+		height: 20px;
+		left: 60px;
+		top: 130px;
+		border-radius : 10px;
+
+		background: #DEF3F2;
+	}
+	.pw{
+		position: absolute;
+	    width: 270px;
+	    height: 20px;
+	    left: 60px;
+	    top: 160px;
+	    border-radius : 10px;
+	    background: #DEF3F2;
+	}
+	.login{
+		position: absolute;
+		width: 278px;
+		height: 20PX;
+		left: 60PX;
+		top: 190px;
+		
+		background: #8E9FDB;
+	}
+	.join{
+		position: absolute;
+
+		height: 20PX;
+		left: 190px;
+		top: 235px;
+		
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 17px;
+		text-align: center;
+
+		color: #0080F7;
+	}
+	
+	.join:hover{
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.Line2{
+		position: absolute;
+		width: 110px;
+		height: 0px;
+		left: 60PX;
+		top: 220px;
+		border-top: 1px solid #000000;
+	}
+	.Line1{
+			position: absolute;
+			width: 110px;
+			height: 0px;
+			left: 228px;
+			top: 220px;
+			border-top: 1px solid #000000;
+	}
+	.text1{
+		position: absolute;
+		width: 280px;
+		height: 16px;
+		left: 60PX;
+		top: 215px;
+		
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 3px;
+		line-height: 8px;
+		text-align: center;
+		
+		color: #000000;
+	}
+</style>
+</head>
+<body>
+	<div class ="login-warp">
+	<div class ="Line2"></div>
+	<div class ="Line1"></div>
+	<h3 class = "text1"> 또는 </h3>
+	<h2 class = "title">Login</h2>
+	<form action="logincontroller" method="post">
+		<input class="id" type="text" name="id" placeholder ="id 입력"> <br/>
+		<input class="pw" type="text" name="pw" placeholder="pw 입력"> <br/>
+		<input class="login" type="submit" value="Login">
+		<a class="join" onClick="location.href='join.html'">join</a>
+	</form>
+	</div>
+</body>
+</html>

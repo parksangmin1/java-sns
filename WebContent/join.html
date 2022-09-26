@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join.html</title>
+<style type="text/css">
+	.join-warp{
+			position: absolute;
+			width: 500px;
+			height: 500px;
+			left: 200px;
+			top: 20px;
+			background: #D9D9D9;
+	}
+	.title{
+			position: absolute;
+			width: 160px;
+			height: 25px;
+			left: 164px;
+			top: 20px;
+			
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 58px;
+			
+			text-align: center;
+			
+			color: #000000;
+	}
+	.text1{
+		position: absolute;
+		width: 160px;
+		height: 25px;
+		left: 164px;
+		top: 60px;
+		
+		font-family: 'Inter';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 58px;
+		text-align: center;
+	}
+	.id{
+		position: absolute;
+		width: 400px;
+		height: 30px;
+		left: 45px;
+		top: 160px;
+		
+		background: #C8DAF5;
+	}
+	.pw{
+			position: absolute;
+			width: 400px;
+			height: 30px;
+			left: 45px;
+			top: 200px;
+			
+			background: #C8DAF5;
+	}
+	.name{
+			position: absolute;
+			width: 400px;
+			height: 30px;
+			left: 45px;
+			top: 240px;
+			
+			background: #C8DAF5;
+	}
+	.age{
+				position: absolute;
+				width: 400px;
+				height: 30px;
+				left: 45px;
+				top: 280px;
+				
+				background: #C8DAF5;
+	}
+	.sex{
+			position: absolute;
+			width: 400px;
+			height: 30px;
+			left: 45px;
+			top: 320px;
+			
+			background: #C8DAF5;
+	}
+	.email{
+			position: absolute;
+			width: 400px;
+			height: 30px;
+			left: 45px;
+			top: 360px;
+			
+			background: #C8DAF5;
+	}
+	.join{
+	position: absolute;
+		width: 180px;
+		height: 35px;
+		left: 65px;
+		top: 430px;
+		
+		background: #DEF3F2;
+	}
+	.back{
+		position: absolute;
+		width: 180px;
+		height: 35px;
+		left: 255px;
+		top: 430px;
+		
+		background: #DEF3F2;
+	}
+
+</style>
+</head>
+<body>
+	
+	<div class="join-warp">
+	
+		<header class = "title">헤더</header>
+		<h3 class = "text1">회원가입</h3>
+		<form action="joincontroller" method="post">
+			<input	class="id" type="text" name="id" placeholder ="id 입력"> <br/>
+			<input  class="pw" type="text" name="pw" placeholder="pw 입력"> <br/>
+			<input  class="name" type="text" name="name" placeholder="name 입력"> <br/>
+			<input  class="age" type="text" name="age" placeholder="age 입력"> <br/>
+			<input  class="sex" type="text" name="sex" placeholder="M/F 입력"> <br/>
+			<input  class="email" type="text" name="email" placeholder="email 입력"> <br/>	
+			<input  class="join" type="submit" value="join">
+			<input  class="back" type="button"  value="되돌아가기" onClick="location.href='login.html'">
+		</form>
+	</div>
+</body>
+</html>
