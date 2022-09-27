@@ -10,7 +10,7 @@
 </head>
 <body>
 	<br><br><br><br>
-	<form action="update" method="post">
+	<form action="boardupdate" method="post">
 	<div style="margin-left:100px;">
 		<div class="xs-3">
 		  <label for="exampleFormControlInput1" class="form-label">제목을 입력하세요.</label>
