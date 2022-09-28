@@ -12,7 +12,6 @@ import javax.security.auth.message.callback.PrivateKeyCallback.Request;
 import util.DBUtil;
 
 public class UserDAO {
-		
 	// 모든 유저 검색
 	public static ArrayList<User> getAllUser() throws SQLException{
 		Connection con = null; 

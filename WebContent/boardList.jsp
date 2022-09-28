@@ -17,7 +17,8 @@
 <%@ include file="./fix/Header.jsp" %>
 		<input type="button" value="글쓰기" onclick="location.href='boardwrite'">
 		<input type="button" value="친구 추가" onclick="location.href='friendfindlist.jsp'">
-		<input type="button"" value="친구 리스트" onclick="location.href='friendfindlist.jsp'">
+	<!-- 	<input type="button"" value="친구 리스트" onclick="location.href='friendlistview.jsp'">  -->
+		<input type="button"" value="친구 리스트" onclick="location.href='friendlistview'">
 	<c:forEach items="${boardList}" var="board">
 		<div class="container">
 		  <div class="post-card">
