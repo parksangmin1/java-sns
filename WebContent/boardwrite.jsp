@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="./fix/Header.jsp" %>
 	<br><br><br><br>
 	<form action="boardwrite" method="post">
 	<div style="margin-left:100px;">
@@ -24,5 +25,6 @@
 		<button type="submit" class="btn btn-outline-success">작성</button>
 	</form>
 	</div>
+	<%@ include file="./fix/Footer.jsp" %>	
 </body>
 </html>

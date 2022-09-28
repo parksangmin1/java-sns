@@ -12,6 +12,7 @@
 <title>Friends List</title>
 </head>
 <body>
+<%@ include file="./fix/Header.jsp" %>
 	<form action="friendsfindlist" method="post" >
 		<h3>친구추가 리스트</h3>
 		<input type="text" name="names" placeholder="이름을 검색해 주세요">
@@ -31,6 +32,6 @@
 		<input type="submit" name = "add" value="친구 추가">
 		<input type="button" value="되돌아가기" onclick="'boardList.jsp'">
 	</form>
-	
+	<%@ include file="./fix/Footer.jsp" %>	
 </body>
 </html>

@@ -9,9 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="./fix/Header.jsp" %>
 	좋아요 누른 사용자
 	<c:forEach items="${likeList}" var="like" >
 		${like.userId}
-	</c:forEach>	
+	</c:forEach>
+	<%@ include file="./fix/Footer.jsp" %>		
 </body>
 </html>
