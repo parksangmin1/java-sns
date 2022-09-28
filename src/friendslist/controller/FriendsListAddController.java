@@ -1,6 +1,7 @@
-package friendslist;
+package friendslist.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -13,6 +14,8 @@ import javax.servlet.http.HttpSession;
 
 import board.BoardDAO;
 import board.BoardDTO;
+import friendslist.FriendsAddDAO;
+import friendslist.FriendsDTO;
 import join.joinDAO;
 import user.User;
 
@@ -22,9 +25,13 @@ public class FriendsListAddController extends HttpServlet {
 
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		String userid = (String)session.getAttribute("id");
 		String friendid = request.getParameter("userId");
+		
 		
 		boolean result = false;
 		try {
@@ -43,7 +50,9 @@ public class FriendsListAddController extends HttpServlet {
 			}
 			
 		}else {
-			request.getRequestDispatcher("error.jsp").forward(request, response);
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert(\"친구추가 실패\"); location.href=\"friendfindlist.jsp\";</script>"); 
+			writer.close();
 		}
 	}
 

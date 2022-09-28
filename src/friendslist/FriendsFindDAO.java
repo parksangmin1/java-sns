@@ -31,6 +31,7 @@ public class FriendsFindDAO {
 				id.add(rset.getString("user_id"));
 			}
 			
+			
 		} finally {
 			DBUtil.close(con, pstmt, rset);;
 		}

@@ -19,7 +19,7 @@ public static boolean getUser(User join) throws SQLException{
 		
 		try {
 			con = DBUtil.getConnection();
-			pstmt = con.prepareStatement("insert into user(user_id,password,name,age,sex,email) values(?, ?, ?, ?, ?, ?);");
+			pstmt = con.prepareStatement("insert into user(user_id,password,name,age,sex,email,profile) values(?, ?, ?, ?, ?, ?,?);");
 			
 			
 	        pstmt.setString(1, join.getId());
@@ -28,6 +28,7 @@ public static boolean getUser(User join) throws SQLException{
 	        pstmt.setInt(4, join.getAge());
 	        pstmt.setString(5, join.getSex());
 	        pstmt.setString(6, join.getEmail());
+	        pstmt.setString(7, join.getProfile());
 			
 			int count = pstmt.executeUpdate();			
 			if(count != 0){
