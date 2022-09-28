@@ -51,6 +51,7 @@ public class LoginController extends HttpServlet {
 				ArrayList<BoardDTO> boardList = BoardDAO.getAllBoard();
 				request.setAttribute("boardList", boardList);
 				request.getRequestDispatcher("boardList.jsp").forward(request, response);
+//				request.getRequestDispatcher("friendlistview.jsp").forward(request, response);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>testfail.jsp</title>
 </head>
 <body>
-	<%
-	String msg = (String) request.getAttribute("error");
-	out.println(msg);
-	%>
+<%@ include file="./fix/Header.jsp" %>
+	<h2>실패</h2>
 	<%@ include file="./fix/Footer.jsp" %>	
 </body>
 </html>

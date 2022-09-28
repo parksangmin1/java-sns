@@ -10,8 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@ include file="./fix/Header.jsp" %>
 	<br><br><br><br>
-	<form action="write" method="post">
+	<form action="boardwrite" method="post">
 	<div style="margin-left:100px;">
 		<div class="xs-3">
 		  <label for="exampleFormControlInput1" class="form-label">제목을 입력하세요.</label>
@@ -24,5 +25,6 @@
 		<button type="submit" class="btn btn-outline-success">작성</button>
 	</form>
 	</div>
+	<%@ include file="./fix/Footer.jsp" %>	
 </body>
 </html>
