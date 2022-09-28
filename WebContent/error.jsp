@@ -11,5 +11,6 @@
 	String msg = (String) request.getAttribute("error");
 	out.println(msg);
 	%>
+	<%@ include file="./fix/Footer.jsp" %>	
 </body>
 </html>
