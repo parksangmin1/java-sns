@@ -26,11 +26,12 @@
 		%>
 		<c:forEach items="${sessionScope.users}" var="friend">
 			  	<tr>
-		  			<td><input name = "userId" type="checkbox" value="${friend.id}">이름 :${friend.name} - 아이디 : ${friend.id}<br><br><td/>
+			  		<td><input name = "userId" type="checkbox" value="${friend.id}">이름 :${friend.name} - 아이디 : ${friend.id}<td/>
+			  		<br><br>
 		   		<tr/>
 		</c:forEach>
 			<input type="submit" name = "add" value="친구 추가">
-		<input type="button" value="되돌아가기" onclick="'boardList.jsp'">
+		<input type="button" value="되돌아가기" onclick="location.href='boardList.jsp'">
 
 	</form>
 	<%@ include file="./fix/Footer.jsp" %>	

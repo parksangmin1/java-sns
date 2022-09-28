@@ -26,6 +26,7 @@ public static boolean addfriends(FriendsDTO addfriends) throws SQLException{
 			addtest.setString(1, addfriends.getUserid());
 			addtest.setString(2, addfriends.getFriendid());
 			
+			
 			rset = addtest.executeQuery();
 	
 			if(rset.next()) {
@@ -35,12 +36,10 @@ public static boolean addfriends(FriendsDTO addfriends) throws SQLException{
 				
 		        pstmt.setString(1, addfriends.getUserid());
 		        pstmt.setString(2, addfriends.getFriendid());
+
 				
 		        count = pstmt.executeUpdate();	
 			}
-			
-
-			
 			if(count != 0){
 				result = true;
 			}

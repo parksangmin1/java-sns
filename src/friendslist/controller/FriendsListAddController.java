@@ -27,13 +27,14 @@ public class FriendsListAddController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		response.setCharacterEncoding("UTF-8");
-		PrintWriter out = response.getWriter();
+		
 		HttpSession session = request.getSession();
 		String userid = (String)session.getAttribute("id");
 		String friendid = request.getParameter("userId");
-		
-		
 		boolean result = false;
+		
+		System.out.println(userid);
+		System.out.println(friendid);
 		try {
 			result = FriendsAddDAO.addfriends(new FriendsDTO(userid, friendid));
 		} catch (Exception e) {
