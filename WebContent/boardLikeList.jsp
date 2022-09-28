@@ -10,8 +10,8 @@
 </head>
 <body>
 	좋아요 누른 사용자
-	<c:forEach items="${boardLikeList}" var="like" >
-		${board.userId}
+	<c:forEach items="${likeList}" var="like" >
+		${like.userId}
 	</c:forEach>	
 </body>
 </html>

@@ -17,7 +17,7 @@ import board.BoardDTO;
 /**
  * Servlet implementation class BoardDeleteController
  */
-@WebServlet("/delete")
+@WebServlet("/boarddelete")
 public class BoardDeleteController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

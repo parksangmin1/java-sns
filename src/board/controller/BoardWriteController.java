@@ -17,7 +17,7 @@ import board.BoardDTO;
 /**
  * Servlet implementation class BoardController
  */
-@WebServlet("/write")
+@WebServlet("/boardwrite")
 public class BoardWriteController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1. boardlist.jsp 에서 새로고침이 일어나면 게시글이 새로생긴다.
