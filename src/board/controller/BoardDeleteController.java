@@ -17,7 +17,7 @@ import board.BoardDTO;
 /**
  * Servlet implementation class BoardDeleteController
  */
-@WebServlet("/delete")
+@WebServlet("/boarddelete")
 public class BoardDeleteController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -47,7 +47,6 @@ public class BoardDeleteController extends HttpServlet {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			// return 을 줘야 jsp절차가 정상적으로 끝남
 			return ;
 		} else {
 			//삭제 버튼을 누른 후  에러 발생

@@ -1,23 +1,14 @@
-<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="util.DBUtil, board.*, java.util.ArrayList" %>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>BoardList</title>
-<link href="BoardList.css" rel="stylesheet" type="text/css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<title>Insert title here</title>
 </head>
 <body>
-	<form action="boardwrite" method="post">
-		<button>글쓰기</button>
-	</form>
-	<c:forEach items="${boardList}" var="board">
+	<form action="board" method="post">
+		<c:forEach items="${boardList}" var="board">
 		<div class="container">
 		  <div class="post-card">
 		    <div class="post-card__content">
@@ -25,11 +16,6 @@
 		        <h1>${board.title}</h1>
 		        <p>${board.userId}</p>
 		        <p>${board.text}</p>
-		        
-		       <%--	<c:forEach items="${likeList}" var="like" varStatus="status">
-		       		${status.count}
-		       		
-		       	</c:forEach> --%> 
 		        <form action="boarddelete" method="post">
 		        	<button type="submit" class="btn btn-info">삭제</button>
 					<input type="hidden" value="${board.boardId}" name="boardId">   
@@ -85,5 +71,8 @@
 		
 		
 	</c:forEach>	
+		
+		
+	</form>
 </body>
 </html>

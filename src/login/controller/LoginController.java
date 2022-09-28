@@ -53,6 +53,7 @@ public class LoginController extends HttpServlet {
 				request.getRequestDispatcher("boardList.jsp").forward(request, response);
 			} catch (SQLException e) {
 				e.printStackTrace();
+				
 			}
 	    	
 			
