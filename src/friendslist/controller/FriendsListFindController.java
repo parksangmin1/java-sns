@@ -26,7 +26,7 @@ public class FriendsListFindController extends HttpServlet {
 				request.setAttribute("id", id);
 				request.getRequestDispatcher("friendaddview.jsp").forward(request, response);
 			}else {
-				request.setAttribute("id", "존재하지 않는 부서");
+				request.setAttribute("id", "존재하지 않는 친구");
 				request.getRequestDispatcher("friendaddview.jsp").forward(request, response);
 			}
 		} catch (SQLException e) {

@@ -29,12 +29,16 @@ public class JoinController extends HttpServlet {
 	}
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, NumberFormatException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		int age =  Integer.parseInt(request.getParameter("age"));
 		String sex = request.getParameter("sex");
 		String email = request.getParameter("email");
+		String profile = request.getParameter("profile");
 		
 		//데이터값 입력 유무만 유효성 검증
 		if(id == null || id.trim().length() == 0 ||
@@ -42,20 +46,25 @@ public class JoinController extends HttpServlet {
 		   name == null || name.trim().length() == 0 ||
 		   age == 0 ||
 		   sex == null || sex.trim().length() == 0 ||
-		   email == null || sex.trim().length() == 0){
+		   email == null || email.trim().length() == 0 ||
+		   profile == null || profile.trim().length() == 0
+				){
+			
 			response.sendRedirect("join.html");
 			return;
 		}
 		boolean result = false;
 		try {
-			result = joinDAO.getUser(new User(id, pw, name, age, sex, email, "", 0));
+			result = joinDAO.getUser(new User(id, pw, name, age, sex, email, profile , 0));
 		} catch (Exception e) {
 			request.setAttribute("error", "back");
 		}
 		if(result){
 			response.sendRedirect("login.html"); 
 		}else {
-			request.getRequestDispatcher("error.jsp").forward(request, response);
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert(\"회원가입 실패\"); location.href=\"join.html\";</script>"); 
+			writer.close();
 		}
 	}
 }

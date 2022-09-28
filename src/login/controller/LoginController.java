@@ -1,6 +1,7 @@
 package login.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -27,6 +28,8 @@ public class LoginController extends HttpServlet {
 	}
 	@SuppressWarnings("unused")
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
 		
     	String id = request.getParameter("id");	
     	String pw = request.getParameter("pw");
@@ -45,13 +48,14 @@ public class LoginController extends HttpServlet {
 		}
 		
 		if(usr == null) {
-			response.sendRedirect("login.html");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert(\"로그인 실패\"); location.href=\"login.html\";</script>"); 
+			writer.close();
 		} else {
 			try {
 				ArrayList<BoardDTO> boardList = BoardDAO.getAllBoard();
 				request.setAttribute("boardList", boardList);
 				request.getRequestDispatcher("boardList.jsp").forward(request, response);
-//				request.getRequestDispatcher("friendlistview.jsp").forward(request, response);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
